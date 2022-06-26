@@ -1,0 +1,7 @@
+module Uni_Register(clk,clear,modo,serder,serizq,entparalela,Q);
+	input clk,clear,serder,serizq;
+	input [1:0] modo;
+	input [3:0] entparalela;
+	output reg [3:0] Q;
+	
+

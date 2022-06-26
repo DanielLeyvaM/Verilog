@@ -1,0 +1,16 @@
+module mux4a1(a,b,c,d,s0,s1,x);
+	input a,b,c,d,s0,s1;
+	output x;
+
+always@(*);
+begin
+	if(s0==0 && s1==0)
+		x=a;
+	else if(s0==1 && s1==0)
+		x=b;
+	else if(s0==0 && s1==1)
+		x=c;
+	else if(s0==1 && s1==1)
+		x=d;
+end
+endmodule

@@ -1,0 +1,11 @@
+module flipflop(
+	input 		D_in,clk;
+	//input wire D_in;	Si no se especifica son tipo wire
+	output 		Q,QNEG;
+);
+
+
+
+
+endmodule
+

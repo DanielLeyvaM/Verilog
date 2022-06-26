@@ -1,0 +1,27 @@
+//Modulo
+module ALU (a,b,s,z);
+
+//Puertos
+//Sentido reg? tamaño nombre
+input 			[3:0]	 a,b;
+input 			[1:0]	 s;
+output 	 reg	[7:0]		 z;
+
+//Alambres
+			wire 	[7:0]	sum,mult;
+			
+assign sum=a+b;
+assign mult=a*b;
+
+always@(s)
+begin
+	case(s)
+		0:	
+			z=sum;
+		default:
+			z=mult;
+	endcase
+
+end
+
+endmodule

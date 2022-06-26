@@ -1,0 +1,11 @@
+//MODULOS
+module Conta10st(clk,Q);
+input clk;
+output reg [3:0] Q;
+wire clear;
+
+//ASIGNACIONES
+FlipFlopJK Q0	(1,1,clear,clk,Q[0],);
+FlipFlopJK Q1	(1,1,clear,clk,Q[0],);
+
+endmodule

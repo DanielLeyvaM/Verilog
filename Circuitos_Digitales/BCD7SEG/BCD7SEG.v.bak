@@ -1,0 +1,33 @@
+//MODULOS
+module BCD7SEG(a,out);
+input a [3:0];
+output reg out[7:0];
+
+//ASIGNACIONES
+always@(a)
+begin
+	//out	 8'bHGFEDCBA
+	if(a==0)
+		out=8'b11000000;
+	else if(a==1)
+		out=8'b11111001;
+	else if(a==2)
+		out=8'b10100100;
+	else if(a==3)
+		out=8'b10110000;
+	else if(a==4)
+		out=8'b10011001;
+	else if(a==5)
+		out=8'b10010010;
+	else if(a==6)
+		out=8'b10000010;
+	else if(a==7)
+		out=8'b10111000;
+	else if(a==8)
+		out=8'b10000000;
+	else if(a==9)
+		out=8'b10010000;
+	else
+		out=8'b01111111;
+end
+endmodule

@@ -1,0 +1,15 @@
+//MODULO
+module Contaasin(y,clk,dir,Q0,Q1,Q2);
+input clk,dir,y;
+output reg Q0,Q1,Q2;
+wire QA,QB,QC,clkb,clkc;
+
+//ASIGNACIONES
+FlipFlopJK JK1 (y,y,clk,Q0,QA);
+MUX2A1ST MUX1 	(Q0,QA,dir,clkb);
+
+FlipFlopJK JK2 (y,y,clkb,Q1,QB);
+MUX2A1ST MUX2 	(Q1,QB,dir,clkc);
+
+FlipFlopJK JK1 (y,y,clkc,Q2,QC);
+

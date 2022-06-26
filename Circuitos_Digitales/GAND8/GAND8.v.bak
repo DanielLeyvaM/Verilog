@@ -1,0 +1,15 @@
+//MODULOS
+module GAND8(a,b,c,d,e,f,g,h,x);
+	input a,b,c,d,e,f,g,h;
+	output x;
+//ASIGNACIONES
+assign x=a&b&c&d&e&f&g&h;
+endmodule
+
+////MODULOS
+//module GAND4(a,x);
+//	input [3:0] a;
+//	output x;
+////ASIGNACIONES
+//assign x= a[3]&a[2]&a[1]&a[0];
+//endmodule 

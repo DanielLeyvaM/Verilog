@@ -1,0 +1,48 @@
+module Contador_Lab1(
+	input 				clk,rst,ena,
+	output reg [3:0] 	unidades,decenas,centenas,millares
+);
+
+
+//Secuencial
+always@(posedge clk or negedge rst)
+begin
+	if(!rst)	
+	begin
+		unidades	<=4'b0000;
+		decenas	<=4'b0000;
+		centenas	<=4'b0000;
+		millares	<=4'b0000;
+	end
+	else
+	begin
+		if(ena)
+		begin
+			unidades<=unidades+1'b1;
+			if(unidades==9)
+			begin
+				unidades<=0;
+				decenas<=decenas+1'b1;
+			end
+			else if(decenas==9)
+			begin
+				decenas<=0;
+				centenas<=centenas+1'b1;
+			end
+			else if(centenas==9)
+			begin
+				centenas<=0;
+				millares<=millares+1'b1;
+			end
+			else if(millares==9 && centenas==6 && decenas==7 && unidades==5)
+			begin
+				unidades	<=4'b0000;
+				decenas	<=4'b0000;
+				centenas	<=4'b0000;
+				millares	<=4'b0000;
+			end
+		end
+	end	
+end
+
+endmodule

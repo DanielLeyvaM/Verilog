@@ -1,0 +1,13 @@
+//MODULOS
+module MUX2A1(a,b,sel,x);
+input a,b,sel;
+output x;
+
+always@(*)
+begin
+	if(sel==0)
+		x=a;
+	else
+		x=b;
+end
+endmodule

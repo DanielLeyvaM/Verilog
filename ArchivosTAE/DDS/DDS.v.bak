@@ -1,0 +1,28 @@
+module DDS 
+#(parameter DATA_WIDTH=8, parameter ADDR_WIDTH=5)	
+(
+	input clk, reset, stop,
+	input [1:0] control_maquina,
+	input [2:0] dds_word,
+	input [(DATA_WIDTH-1):0] data,
+	input [(ADDR_WIDTH-1):0] addr,	
+);
+
+//Componentes
+State_machine Maq1 (
+	input	clk, reset,full_ram, stop,
+	input [1:0] control,
+	input [2:0] dds_word,
+	output reg [2:0] dds_control,
+	output reg we_control
+);
+
+
+single_port_ram ram1 (
+	input [(DATA_WIDTH-1):0] data,
+	input [(ADDR_WIDTH-1):0] addr,	
+	input we, clk, rst,
+	input [2:0] read,
+	output reg full,
+	output [(DATA_WIDTH-1):0] q
+);

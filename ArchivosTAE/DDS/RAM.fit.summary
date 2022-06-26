@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun May 08 01:01:26 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : RAM
+Top-level Entity Name : DDS
+Family : Cyclone 10 LP
+Device : 10CL006YE144C6G
+Timing Models : Final
+Total logic elements : 73 / 6,272 ( 1 % )
+    Total combinational functions : 68 / 6,272 ( 1 % )
+    Dedicated logic registers : 46 / 6,272 ( < 1 % )
+Total registers : 46
+Total pins : 24 / 89 ( 27 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 276,480 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

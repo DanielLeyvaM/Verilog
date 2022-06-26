@@ -1,0 +1,27 @@
+module comparadorPWM
+#(parameter DATA=8)
+(
+	input clk,rst,
+	input [(DATA-1):0] bits,
+	input [3:0] sw,
+	output reg [3:0] display,
+	output reg pwm
+);
+
+parameter division=2**(Data);
+parameter porcentaje=(sw*data)/10;
+
+always@(posedge clk or negedge rst)
+begin
+	if(~rst) begin
+		DATA=0;
+		pwm=0;
+	end
+	else begin
+		pwm=1;
+		if(DATA>porcentaje)
+			pwm=0;
+	end
+	 
+end
+endmodule

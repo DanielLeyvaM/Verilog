@@ -1,0 +1,14 @@
+module cont2b(clk,reset,out);
+	input clk,reset; 
+	output reg [1:0] out;
+	
+	reg [1:0] contador;
+always@(posedge clk)
+begin
+	if(~reset)
+		contador<=0;
+	else
+		contador<=contador+1;
+	
+end
+endmodule

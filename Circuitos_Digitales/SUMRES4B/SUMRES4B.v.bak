@@ -1,0 +1,17 @@
+//MODULOS
+module(a,b,s,co,sal);
+input [3:0]	a,b;
+input 		s;
+output [3:0] sal;
+output 		co;
+wire m1,m2,m3,m4;
+
+//ASIGNACIONES
+//componentes
+MUX2A1ST mux1 (a[0],~a[0],s,m1);
+MUX2A1ST mux1 (a[1],~a[1],s,m2);
+MUX2A1ST mux1 (a[2],~a[2],s,m3);
+MUX2A1ST mux1 (a[3],~a[3],s,m4); 
+
+SUM4B sumres (a,b,s,sal,co);
+endmodule

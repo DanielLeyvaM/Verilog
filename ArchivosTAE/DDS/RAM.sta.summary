@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : -2.900
+TNS   : -2.900
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.237
+TNS   : -72.105
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 1.740
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -57.696
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : -2.522
+TNS   : -2.522
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.898
+TNS   : -60.707
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 1.587
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -57.696
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : -1.296
+TNS   : -1.296
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.873
+TNS   : -23.878
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -57.593
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'State_machine:Maq1|state.TUNNING_WORD'
+Slack : 0.433
+TNS   : 0.000
+
+------------------------------------------------------------

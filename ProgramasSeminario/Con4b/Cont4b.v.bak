@@ -1,0 +1,22 @@
+//Module
+module con4b (clk,sal);
+
+//Puertos
+//sentido reg? tamaño nombre;
+input 					 clk;
+output 	 reg 	[3;0]	 sal;
+
+//Asignaciones
+always@(posedge clk)
+begin
+	if
+	begin	
+		sal=sal+1;
+	end
+	
+end
+
+endmodule
+
+
+

@@ -1,0 +1,17 @@
+//module
+module Cont9b (clk,rst,sal,ctrl);
+
+//Puertos
+input 		 clk,rst,ctrl;
+output reg 	[3:0] 	sal;
+
+always@(posedge clk)
+begin
+	if(rst==1)
+		sal=0;
+	else
+		if(rst==9)
+			sal=0;
+		else
+			sal=sal+1;
+end

@@ -1,0 +1,15 @@
+module cont8b(
+	input 				clk,rst,ena,
+	output reg [7:0] Qdata
+);
+
+always@(posedge clk)
+begin
+	if(rst)
+		Qdata<=8'd0;	//8'b0000_0000;
+	else
+	if(ena)
+		Qdata<=Qdata+1'b1;
+end
+
+endmodule

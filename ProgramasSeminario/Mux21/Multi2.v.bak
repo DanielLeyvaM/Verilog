@@ -1,0 +1,9 @@
+//modulo
+module Multi2(a,b,s,x);
+
+//Puertos
+input (a,b,s);
+output (x);
+
+assign x=(a&~s)|(b&s);
+endmodule

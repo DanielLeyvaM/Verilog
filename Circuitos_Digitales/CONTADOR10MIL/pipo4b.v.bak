@@ -1,0 +1,17 @@
+module pipo4b (Q,D,LE,clk);
+	output [3:0]Q;
+	input [3:0]D;
+	input LE,clk;
+	
+reg [3:0]Q;
+
+always @(negedge clk)
+begin
+	if(LE==1'b1)
+	Q&lt;=D;
+	else if (LE==1'b0)
+	Q&lt;=Q;
+	else
+	Q&lt;=4'bzzzz;
+end
+endmodule

@@ -1,0 +1,19 @@
+//MODULOS
+module CONTA99(clk,rst,sel,out);
+input clk,rst;
+input [1:0] sel;
+output [8:0] out;
+wire ena_uni;
+wire [3:0] unidades,decenas,numeros;
+
+//ASIGNACIONES
+//Componentes
+Divisor1Hz Div1		(clk,ena_uni);
+Divisor100Hz Div100	(clk,sel);
+
+Conta10st ContUni		(ena_uni,unidades);
+Conta10st ContDec		(unidades,decenas);
+
+MUX2A1 mux1				(unidades,decenas,sel,numeros);
+BCD7SEG decoder		(numeros,out);
+

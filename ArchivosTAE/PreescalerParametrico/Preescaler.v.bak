@@ -1,0 +1,22 @@
+module preescaler 
+#(parameter frec_real=50000000,parameter frec_out=10000) (
+	input clkMhz,
+	output reg clk
+);
+	
+parameter frec=(frec_real/2)/frec_out;
+reg [24:0] contador; 		//25 bits para reloj de 1hz
+
+always@(posedge clkMhz)
+begin
+	if (contador==frec)
+		clk<=1;
+	else begin
+		clk<=clk+1;
+		clk=0;
+	end
+end
+endmodule
+
+
+

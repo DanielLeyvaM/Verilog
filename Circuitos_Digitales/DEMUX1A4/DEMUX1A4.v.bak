@@ -1,0 +1,20 @@
+//MODULOS
+module DEMUX1A4(a,sel,out);
+input a;
+input [1:0] sel;
+output reg [3:0] out;
+
+//ASIGNACIONES
+always@(a,sel)
+begin
+	case(sel)
+	begin
+		0: out[0]=a;
+		1:	out[1]=a;
+		2: out[2]=a;
+		3: out[3]=a;
+		default=0;
+	end
+	endcase
+end
+endmodule

@@ -1,0 +1,27 @@
+module Uni_Register (clear,modo,serder,serizq,entparalela,Q);
+	input clear,serder,serizq;
+	input [1:0] modo;
+	input [3:0] entparalela;
+	output [3:0] Q;
+
+always@(posedge clk or negedge clear)
+begin 
+	if(~clear)
+		Q=0;
+	else
+		case(modo)
+			0: begin
+			
+			end
+			1: begin
+			
+			end
+			2: begin
+			
+			end
+			3: begin
+			
+			end
+			
+end	
+endmodule

@@ -1,0 +1,11 @@
+module ImparyPar(A,B,C,D,par,impar,salida);
+input(A,B,C,D);
+wire par,impar;
+
+and and1(par,~A,~D);
+and and2(impar,A,D);
+or or1(salida,and1,and2);
+
+endmodule
+
+

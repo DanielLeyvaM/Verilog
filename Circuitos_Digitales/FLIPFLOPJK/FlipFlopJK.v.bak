@@ -1,0 +1,26 @@
+//MODULOS
+module FlipFlopJK(J,K,clk,Q,QNEG);
+input J,K,clk;
+output Q,QNEG;
+
+always@(posedge clk)
+begin
+	if(J==0 and K==0)begin
+		Q<=Q;
+		QNEG<=~Q;
+		end
+	else if(J==0 and K==1)begin
+		Q<=0;
+		QNEG<=~Q;
+		end
+	else if(J==1 and K==0)begin
+		Q<=1;
+		QNEG<=~Q;
+		end
+	else
+	begin
+		Q<=0;
+		QNEG<=~Q;
+	end
+end
+endmodule

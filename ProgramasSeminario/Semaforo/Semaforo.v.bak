@@ -1,0 +1,60 @@
+//modulo
+module semaforo (r,a,v,clk,rst);
+
+//Puertos
+input clk, rst;
+output reg r,a,v;
+
+//Registros
+		reg [1:0] 	estados;
+		
+//Parametros
+parameter alto=0, siga=1, preventivo=2; 
+ 
+ always@(estados)
+ begin
+ case(estados)
+	alto: 
+	begin
+		r=1;
+		v=0;
+		a=0;
+	end
+	
+	siga:
+	begin
+		r=0;
+		v=1;
+		a=0;
+	end
+		
+	preventivo:
+	begin
+		r=0;
+		v=0;
+		a=1;
+	end
+	endcase
+end
+
+always@(posedge clk)
+begin
+	if (rst)
+	estados=alto;
+	else
+		case(estados)
+			alto:
+			estados=siga;
+			siga:
+			estados=preventivo;
+			preventivo:
+			estados=alto;
+			
+		endcase
+end
+
+endmodule
+
+	
+ 
+ 

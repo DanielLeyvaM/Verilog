@@ -1,0 +1,19 @@
+module DIV10HZ (clkhz, clkmhz);
+	output clkhz;
+	input clkmhz;
+	reg clkhz;
+	
+	reg [21:0]contador;
+	
+
+always @ (negedge clkmhz)
+begin
+	if (contador == 2500000)
+	begin
+		clkhz <= !clkhz;
+		contador <= 0;
+	end
+	else
+		contador <= contador +1;
+	end
+endmodule

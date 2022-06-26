@@ -1,0 +1,19 @@
+module Divisor1Hz(clkMHz,clkHz);
+input clkMHz;				//frec reloj=50MHz
+output reg clkHz;
+reg [24:0] contador;		//Bits necesarios para 25000 (f/2)
+
+always@(negedge clkMHz)
+begin
+	if(contador==25000)
+	begin
+		clkHz<=!clkHz;
+		contador<=0;
+	end
+	else
+		contador<=contador+1;
+end
+endmodule
+
+		
+		
